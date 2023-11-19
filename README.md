@@ -1,3 +1,3 @@
-# @clytage/template
+# minecraft-skin-converter
 
-A template to generate well-configured project base for Clytage.
+An web application to convert Minecraft skins between Steve and Alex versions.

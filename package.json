@@ -1,7 +1,7 @@
 {
-    "name": "template",
+    "name": "minecraft-skin-converter",
     "version": "1.0.0",
-    "description": "A template to generate well-configured project base for Clytage.",
+    "description": "An web application to convert Minecraft skins between Steve and Alex versions.",
     "main": "dist/index.js",
     "type": "module",
     "scripts": {
@@ -14,14 +14,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/clytage/template.git"
+        "url": "git+https://github.com/clytage/minecraft-skin-converter.git"
     },
     "author": "Clytage <admin@clytage.org>",
     "license": "AGPL-3.0",
     "bugs": {
-        "url": "https://github.com/clytage/template/issues"
+        "url": "https://github.com/clytage/minecraft-skin-converter/issues"
     },
-    "homepage": "https://github.com/clytage/template#readme",
+    "homepage": "https://github.com/clytage/minecraft-skin-converter#readme",
     "engines": {
         "node": ">=16.6.0",
         "npm": ">=7.0.0"
