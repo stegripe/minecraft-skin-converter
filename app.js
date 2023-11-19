@@ -5,6 +5,7 @@
     var imgElem = document.getElementById("imgElem");
     var s2aButton = document.getElementById("s2aButton");
     var saveButton = document.getElementById("saveButton");
+    var resetButton = document.getElementById("resetButton");
     var downloadAnchor = document.getElementById("downloadAnchor");
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -14,6 +15,7 @@
     imgElem.addEventListener("load", loadImg2Canvas);
     s2aButton.addEventListener("click", s2a);
     saveButton.addEventListener("click", saveImg2File);
+    resetButton.addEventListener("click", loadFile2Img);
 
     function loadFile2Img(file) {
         var file = fileElem.files[0];
@@ -44,6 +46,7 @@
         loadCanvas2Img();
         saveButton.value = "Save";
         saveButton.disabled = false;
+        resetButton.disabled = false;
     }
 
     function saveImg2File() {
