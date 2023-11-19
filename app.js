@@ -13,7 +13,7 @@
     window.addEventListener("load", loadImg2Canvas);
     fileElem.addEventListener("change", loadFile2Img);
     imgElem.addEventListener("load", loadImg2Canvas);
-    s2aButton.addEventListener("click", s2a);
+    s2aButton.addEventListener("click", s2aS);
     saveButton.addEventListener("click", saveImg2File);
     resetButton.addEventListener("click", loadFile2Img);
 
@@ -34,9 +34,8 @@
         imgMon.src = imgElem.src = canvas.toDataURL();
     }
 
-    function s2a() {
+    function s2aS() {
         processImg(() => {
-            ctx.fillRect(0, 0, 10, 10);
         });
     }
 
