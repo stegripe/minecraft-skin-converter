@@ -44,8 +44,8 @@
         func();
         loadCanvas2Img();
         saveButton.value = "Save";
-        saveButton.disabled = false;
-        resetButton.disabled = false;
+        saveButton.disabled = true;
+        resetButton.disabled = true;
     }
 
     function saveImg2File() {
