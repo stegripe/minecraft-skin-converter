@@ -36,6 +36,16 @@
 
     function s2aS() {
         processImg(() => {
+            shift(55, 16, 1, 32, -1);
+            shift(51, 16, 1, 4, -1);
+            shift(51, 32, 1, 4, -1);
+            shift(47, 16, 8, 32, -1);
+            shift(63, 48, 1, 16, -1);
+            shift(59, 48, 1, 4, -1);
+            shift(55, 48, 8, 16, -1);
+            shift(47, 48, 1, 16, -1);
+            shift(43, 48, 1, 4, -1);
+            shift(39, 48, 8, 16, -1);
         });
     }
 
@@ -46,6 +56,13 @@
         saveButton.value = "Save";
         saveButton.disabled = true;
         resetButton.disabled = true;
+    }
+
+    function shift(x, y, w, h, pixelsToMove) {
+        var clearx = x - pixelsToMove + ((pixelsToMove < 0) ? w - 1 : 1);
+        var data = ctx.getImageData(x, y, w, h);
+        ctx.putImageData(data, x + pixelsToMove, y);
+        ctx.clearRect(clearx, y, pixelsToMove, h);
     }
 
     function saveImg2File() {
