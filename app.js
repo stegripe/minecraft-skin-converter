@@ -74,11 +74,11 @@
         resetButton.disabled = false;
     }
 
-    function shift(x, y, w, h, pixelsToMove) {
+    function shift(x, y, w, h, pixelsToMove, copyMode = false) {
         var clearx = x - pixelsToMove + ((pixelsToMove < 0) ? w - 1 : 1);
         var data = ctx.getImageData(x, y, w, h);
         ctx.putImageData(data, x + pixelsToMove, y);
-        ctx.clearRect(clearx, y, pixelsToMove, h);
+        if (!copyMode) ctx.clearRect(clearx, y, pixelsToMove, h);
     }
 
     function saveImg2File() {
